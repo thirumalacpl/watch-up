@@ -161,6 +161,7 @@ $.ajax({url: 'http://staging.eimpressive.com/slimrestapi-watch/count.php?region_
       $("#popupsearchmade").popup("open");
 //alert('Data available for the search made');
 //http://bit.ly/1YaV8Gg 
+//http://bit.ly/1Mb7aZz
 sessionStorage.setItem("new_verification_count_array",JSON.stringify(result[0]));
 sessionStorage.setItem("supervisor_inprogress_count_array",JSON.stringify(result[1]));
 sessionStorage.setItem("supervisor_verified_count_array",JSON.stringify(result[2]));
@@ -204,6 +205,7 @@ for(a=0;a<currentobj_log_inpro.length;a++){
         image=activity_lok_obj.document;
         status=activity_lok_obj.status;
         date_new=activity_lok_obj.log_date;
+        
 var s = date_new;
 var bits = s.split(/\D/);
 var datea = new Date(bits[0], --bits[1], bits[2], bits[3], bits[4]);
@@ -246,7 +248,7 @@ document.getElementById('messageText').value = "";
   var status_val_inpro = $('input:radio[name=radio-choice-a]:checked').val();
 
       var sdocument=$('input[type=file]').val().split('\\').pop();
-
+alert(sdocument+' submit');
 
   
     $.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
