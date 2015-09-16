@@ -190,7 +190,7 @@ function onSuccess(data, status)
         {
 
           var sdocument=$('input[type=file]').val('');
-       
+       alert(sdocument);
        sessionStorage.setItem("supervisor_activity_log_array",JSON.stringify(data));
 
         currentobj_log_inpro =  JSON.parse(sessionStorage.getItem("supervisor_activity_log_array"));
