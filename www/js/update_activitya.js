@@ -93,6 +93,9 @@ $('#locv').text(user_obja.state);
 
 //alert(supervisor_activity_log_array+'super log');
 
+//alert(qualification_id+'qualification_id');
+//alert(verification_user_id+'verification_user_id');
+
 for(a=0;a<supervisor_activity_log_array.length;a++){
 
         activity_lok_obj = supervisor_activity_log_array[a];
@@ -101,7 +104,9 @@ for(a=0;a<supervisor_activity_log_array.length;a++){
         text=activity_lok_obj.activity_log;
         image=activity_lok_obj.document;
          status=activity_lok_obj.status;
+         type=activity_lok_obj.type;
       date_new=activity_lok_obj.log_date;
+
 var s = date_new;
 var bits = s.split(/\D/);
 var datea = new Date(bits[0], --bits[1], bits[2], bits[3], bits[4]);
@@ -110,8 +115,10 @@ var date=datea.getDate()+'/'+parseInt(datea.getMonth() + 1)+'/'+datea.getFullYea
 var time=datea.getHours()+':'+datea.getMinutes();
 
 
-if(idf == verification_user_id){
+if(idf == verification_user_id && type == qualification_id ){
 
+//alert(qualification_id+'qualification_id iiiiiiiiiiiiinnnnnnnnn'+type);
+//alert(verification_user_id+'verification_user_id iiiiiinnnn'+idf);
   
 //alert(date+'2');
 if(status == 'supervisor' && text !==''){

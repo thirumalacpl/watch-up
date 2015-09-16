@@ -11,7 +11,7 @@ window.addEventListener("load",function() {
 setTimeout(function(){ window.scrollTo(0, 1) }, 0);
 });
 //eliminate the 300 ms delay in click events
-FastClick.attach(document.body);
+
 //window.addEventListener('load', function () {new FastClick.attach(document.body)}, false);//add an icon to the homescreen for lauch
 //addToHomescreen();
 var addToHomeConfig = {returningVisitor: true, expire: 720, autostart: false};
