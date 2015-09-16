@@ -1,6 +1,6 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.advs.manhummel.lpa" version="1.1.0">
-  <name>WATCHGUARD_up</name>
-  <description>WATCHGUARD_up</description>
+  <name>WATCHGUARD_camera</name>
+  <description>WATCHGUARD_camera</description>
   <author href="http://advicesync.com" email="support@advicesync.com">eImpressive</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
@@ -27,6 +27,7 @@
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <plugin name="DatePickerPlugin" value="com.bikasv.plugins.datepicker.DatePickerPlugin"/>
+
 
 <!-- iOS Specific Fixes -->
   <gap:plugin name="com.phonegap.plugin.statusbar" />
@@ -100,6 +101,21 @@
       <icon src="ApplicationIcon.png" gap:platform="winphone"/>
 <!--   <icon src="ApplicationIcon.png" gap:platform="winphone" gap:role="background"/> -->
   <!-- windows end -->
+<!--camera test-->
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+<uses-permission android:name="android.permission.RECORD_VIDEO" />
+<uses-permission android:name="android.permission.SEND_SMS" />
+<uses-feature android:name="android.hardware.telephony" android:required="false" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.VIBRATE" />
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+<uses-permission android:name="android.permission.INTERNET" />
+<!--camera test end-->
+
                                                 <!--splash screen-->
 <!-- android -->
   <gap:splash src="www/images/screen/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>

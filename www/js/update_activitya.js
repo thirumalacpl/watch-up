@@ -160,6 +160,7 @@ $.ajax({url: 'http://staging.eimpressive.com/slimrestapi-watch/count.php?region_
     if(result[0]){
       $("#popupsearchmade").popup("open");
 //alert('Data available for the search made');
+//http://bit.ly/1YaV8Gg 
 sessionStorage.setItem("new_verification_count_array",JSON.stringify(result[0]));
 sessionStorage.setItem("supervisor_inprogress_count_array",JSON.stringify(result[1]));
 sessionStorage.setItem("supervisor_verified_count_array",JSON.stringify(result[2]));
