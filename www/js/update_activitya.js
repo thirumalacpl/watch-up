@@ -205,7 +205,7 @@ var chatq='<div class="ui-grid-b" style="padding-top:5%;"><div class="ui-block-a
 $('#chatq').append(chatq);
 }
 if(status == 'doc' && image !==''){
-//alert('doc');
+//alert('doc'); http://bit.ly/1KkGGUQ
 
 var chatq='<div class="ui-grid-b" style="padding-top:5%;" id="image"><div class="ui-block-a msg_grid_3">  </div><div class="ui-block-b msg_box msg_grid_4"><p class="msg_grid_p_1"><a href="#"  class=""><img src="http://115.118.113.83/watchguardlive/super/'+activity_lok_obj.document+'" style="width:100px;height:80px;margin-left:25%" alt="Band"></a></p></div><div class="ui-block-c msg_grid_5" style="padding-top:5%;"><i class="zmdi zmdi-time zmd-fw" style="    opacity: 0.5; padding-left:7%;"></i><span class="msg_span_3">'+time+'</span><br><span class="msg_span_3">'+date+'</span> </div>'
 $('#chatq').append(chatq);

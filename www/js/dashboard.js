@@ -2,6 +2,7 @@ $(document).on('pageshow', '#dashboard', function(){
 
 //alert("dashboard");
 
+
 regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
 //usernamearray =  JSON.parse(sessionStorage.getItem("usernamearray"));
 //alert(regionArray_array.region);
@@ -28,6 +29,28 @@ region=regionArray_array.region;
 regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
 username=regionArray_array.username;
 $("#user").html(username);
+
+document.addEventListener("backbutton", function() {
+            if ( $('.ui-page-active').attr('id') == 'dashboard') {
+                exitAppPopup();
+            } else {
+                history.back();             
+            }
+        }, false);
+
+function exitAppPopup() {
+    navigator.notification.confirm(
+          'Exit PhoneGap ' + device.cordova + ' Demo?'
+        , function(button) {
+              if (button == 2) {
+                  navigator.app.exitApp();
+              } 
+          }
+        , 'Exit'
+        , 'No,Yes'
+    );  
+    return false;
+}
 
 for(a=0;a<new_verification_count_array.length;a++){
   new_count = new_verification_count_array[a];
