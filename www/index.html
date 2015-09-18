@@ -41,23 +41,32 @@
   <link rel="stylesheet" href="icons/css/material-design-iconic-font.min.css" />
    <!--icons-->
 
+
 <script type="text/javascript">
-	 function showConfirm() {
-        navigator.notification.confirm(
-            'Do you really want to exit?',  // message
-            exitFromApp,              // callback to invoke with index of button pressed
-            'Exit',            // title
-            'Cancel,OK'         // buttonLabels
-        );
+	
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady()
+    {
+        // Add event listener to the back button
+        document.addEventListener("backbutton", backButtonHandler, false);
     }
-
-    
-    function exitFromApp(buttonIndex) {
-      if (buttonIndex==2){
-       navigator.app.exitApp();
-    	}
+ 
+    function backButtonHandler(e )
+   {
+ 
+      if( $("#dashboard").length > 0 )
+      {
+         // Code to exit app
+         navigator.app.exitApp();
+      }
+      else
+      {
+        // Code to navigate to the history action
+         navigator.app.backHistory();
+      }
+}
 </script>
-
 
 <style type="text/css">
   #status_val-button{
@@ -120,7 +129,7 @@
               </div>
               </form>
             </div>
-<a onclick="showConfirm(); return false;" data-icon="delete" data-iconpos="notext" class="ui-btn-right"></a>
+
 
   </div>
 </div> 
@@ -257,7 +266,32 @@
 </div>
 
 </div>
-</div>          
+</div>   
+<script type="text/javascript">
+	
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady()
+    {
+        // Add event listener to the back button
+        document.addEventListener("backbutton", backButtonHandler, false);
+    }
+ 
+    function backButtonHandler(e )
+   {
+ 
+      if( $("#dashboard").length > 0 )
+      {
+         // Code to exit app
+         navigator.app.exitApp();
+      }
+      else
+      {
+        // Code to navigate to the history action
+         navigator.app.backHistory();
+      }
+}
+</script>       
 </div>
 </div>
 <!--end-->
