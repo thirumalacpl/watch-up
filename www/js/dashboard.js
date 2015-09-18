@@ -17,7 +17,7 @@ supervisor_verified_count_array =  JSON.parse(sessionStorage.getItem("supervisor
 supervisor_not_verified_count_array =  JSON.parse(sessionStorage.getItem("supervisor_not_verified_count_array"));
 supervisor_completed_count_array =  JSON.parse(sessionStorage.getItem("supervisor_completed_count_array"));
 
-//alert(supervisor_not_verified_count_array.not_verified_count);
+//alert(supervisor_not_verified_count_array.not_verified_count); http://bit.ly/1KkGGUQ
 
 supervisor_inprogress_count_array =  JSON.parse(sessionStorage.getItem("supervisor_inprogress_count_array"));
 supervisor_verified_count_array =  JSON.parse(sessionStorage.getItem("supervisor_verified_count_array"));
@@ -30,27 +30,6 @@ regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
 username=regionArray_array.username;
 $("#user").html(username);
 
-document.addEventListener("backbutton", function() {
-            if ( $('.ui-page-active').attr('id') == 'dashboard') {
-                exitAppPopup();
-            } else {
-                history.back();             
-            }
-        }, false);
-
-function exitAppPopup() {
-    navigator.notification.confirm(
-          'Exit PhoneGap ' + device.cordova + ' Demo?'
-        , function(button) {
-              if (button == 2) {
-                  navigator.app.exitApp();
-              } 
-          }
-        , 'Exit'
-        , 'No,Yes'
-    );  
-    return false;
-}
 
 for(a=0;a<new_verification_count_array.length;a++){
   new_count = new_verification_count_array[a];
