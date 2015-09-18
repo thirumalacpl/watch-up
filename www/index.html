@@ -41,29 +41,24 @@
   <link rel="stylesheet" href="icons/css/material-design-iconic-font.min.css" />
    <!--icons-->
 
-
-
 <script type="text/javascript">
-  document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-    document.addEventListener("backbutton", onBackKeyDown, false); //Listen to the User clicking on the back button
-}
-
-function onBackKeyDown(e) {
-    e.preventDefault();
-    navigator.notification.confirm("Are you sure you want to exit ?", onConfirm, "Confirmation", "Yes,No"); 
-    // Prompt the user with the choice
-}
-
-function onConfirm(button) {
-    if(button==2){//If User selected No, then we just do nothing
-        return;
-    }else{
-        navigator.app.exitApp();// Otherwise we quit the app.
+	 function showConfirm() {
+        navigator.notification.confirm(
+            'Do you really want to exit?',  // message
+            exitFromApp,              // callback to invoke with index of button pressed
+            'Exit',            // title
+            'Cancel,OK'         // buttonLabels
+        );
     }
-}
+
+    
+    function exitFromApp(buttonIndex) {
+      if (buttonIndex==2){
+       navigator.app.exitApp();
+    	}
 </script>
+
+
 <style type="text/css">
   #status_val-button{
     background: #B5B3B3 !important;
@@ -72,6 +67,7 @@ function onConfirm(button) {
     #status_val-button:hover {
     background: #B5B3B3 !important;
     color:#fff !important;
+
   }
 </style>
 	</head>
@@ -124,12 +120,9 @@ function onConfirm(button) {
               </div>
               </form>
             </div>
-
+<a onclick="showConfirm(); return false;" data-icon="delete" data-iconpos="notext" class="ui-btn-right"></a>
 
   </div>
-
-
-
 </div> 
 
 
@@ -2899,7 +2892,7 @@ style=" padding:17px !important;">
 
   <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
                            
-                            <input type="radio" name="radio-choice-a" id="radio-choice-bb" value="verified">
+                            <input type="radio" name="radio-choice-a" id="radio-choice-bb" value="Verified">
                             <label for="radio-choice-bb">Verified</label>
                            
                         </fieldset>
