@@ -233,7 +233,7 @@ document.getElementById('messageText').value = "";
 var status_val_inpro = $('input:radio[name=radio-choice-a]:checked').val();
 
 var sdocument=$('input[type=file]').val().split('\\').pop();
-alert(sdocument+' submit');
+//alert(sdocument+' submit');
 
 
 $.ajaxPrefilter(function( options, originalOptions, jqXHR ) {

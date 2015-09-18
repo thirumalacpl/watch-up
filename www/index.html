@@ -40,8 +40,37 @@
   <link rel="stylesheet" href="icons/css/material-design-iconic-font.css" />
   <link rel="stylesheet" href="icons/css/material-design-iconic-font.min.css" />
    <!--icons-->
+<script type="text/javascript">
+	 document.addEventListener("deviceready", function(){
+      alert("123");
+ },true);
+</script>
+   <script type="text/javascript">
+	document.addEventListener("backbutton", function() {
+            if ( $('.ui-page-active').attr('id') == 'dashboard') {
+            	alert("page active exit");
+                exitAppPopup();
+            } else {
+                history.back();             
+            }
+        }, false);
 
+function exitAppPopup() {
+    navigator.notification.confirm(
+          'Exit PhoneGap ' + device.cordova + ' Demo?'
+        , function(button) {
+              if (button == 2) {
+              	alert('asd');
+                  navigator.app.exitApp();
+              } 
+          }
+        , 'Exit'
+        , 'No,Yes'
+    );  
+    return false;
+}
 
+</script>
 
 
 <style type="text/css">
@@ -118,32 +147,7 @@
 
  <div data-role="page" id="dashboard">
     <script type="text/javascript" src="js/dashboard.js"></script>
-    <script type="text/javascript">
-	document.addEventListener("backbutton", function() {
-            if ( $('.ui-page-active').attr('id') == 'dashboard') {
-            	alert("page active exit");
-                exitAppPopup();
-            } else {
-                history.back();             
-            }
-        }, false);
 
-function exitAppPopup() {
-    navigator.notification.confirm(
-          'Exit PhoneGap ' + device.cordova + ' Demo?'
-        , function(button) {
-              if (button == 2) {
-              	alert('asd');
-                  navigator.app.exitApp();
-              } 
-          }
-        , 'Exit'
-        , 'No,Yes'
-    );  
-    return false;
-}
-
-</script>
       <!-- <nd2-include data-src="examples/fragments/panel.left.html"></nd2-include> -->
 
       <div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
@@ -187,7 +191,7 @@ function exitAppPopup() {
     border-radius: 50%;
     color:#fff;
        padding: 2% 4% 2% 5%;" id="new_veri_count">3</sup></a><br>
-        <p id="grid_opa_1"><span>Verification</span></p>
+        <p id="grid_opa_1"><span>New Task</span></p>
       </div>
        <div class="ui-block-b grid_main1_1  ui-btn ui-corner-all ui-shadow logbutton waves-effect waves-button" id="inprogress">
         <a href="#" class="" style="    list-style: none;
@@ -210,7 +214,7 @@ function exitAppPopup() {
 
 <div class="ui-grid-solo">
      <div class="ui-grid-a">
-      <div class="ui-block-a grid_main2_1 ui-btn ui-corner-all ui-shadow logbutton waves-effect waves-button " id="not_verified">
+      <div class="ui-block-a grid_main2_1 ui-btn ui-corner-all ui-shadow logbutton waves-effect waves-button " id="verified">
 
         <a href="#" class="" style="text-decoration:none; "><img src="images/not-verified.png"  width="45" height="30" class="img_pad_1" style="margin-right: -5px;">
             <sup style="text-decoration:none;    vertical-align: 337%;
@@ -221,13 +225,13 @@ function exitAppPopup() {
     background: #32A582;
     border-radius: 50%;
     color:#fff;
-        padding: 2% 4% 2% 5%;" id="not_verified_count">0</sup>
+        padding: 2% 4% 2% 5%;" id="verified_count">0</sup>
         </a><br>
-        <p id="grid_opa3_1"><span>Not Verified</span></p>
+        <p id="grid_opa3_1"><span> To Be Approved</span></p>
       </div>
 
 
-      <div class="ui-block-b grid_main3_1 ui-btn ui-corner-all ui-shadow logbutton waves-effect waves-button" id="verified">
+      <div class="ui-block-b grid_main3_1 ui-btn ui-corner-all ui-shadow logbutton waves-effect waves-button" id="completed">
         <a href="#" class="" style="text-decoration:none; "><img src="images/verified.png" class="img_pad_1" style="margin-right: -5px;">
             <sup style="text-decoration:none;    vertical-align: 337%;
     padding-top: -51% !important;
@@ -237,16 +241,16 @@ function exitAppPopup() {
     background: #A163E4;
     border-radius: 50%;
     color:#fff;
-        padding: 2% 4% 2% 5%;" id="verified_count">3</sup>
+        padding: 2% 4% 2% 5%;" id="completed_count">3</sup>
         </a><br>
-          <p id="grid_opa4_1">To Be Approved</p>
+          <p id="grid_opa4_1">Completed</p>
       </div>
     </div>
 </div>
 
 <div class="ui-grid-solo">
      <div class="ui-grid-a">
-      <div class="ui-block-a grid_main2_1 ui-btn ui-corner-all ui-shadow logbutton waves-effect waves-button " id="completed">
+      <div class="ui-block-a grid_main2_1 ui-btn ui-corner-all ui-shadow logbutton waves-effect waves-button " id="not_verified">
 
         <a href="#" class="" style="text-decoration:none; "><img src="images/complete-i.png"  width="45" height="30" class="img_pad_1" style="margin-right: -5px;">
             <sup style="text-decoration:none;    vertical-align: 337%;
@@ -257,9 +261,9 @@ function exitAppPopup() {
     background: #E2550D;
     border-radius: 50%;
     color:#fff;
-        padding: 2% 4% 2% 5%;" id="completed_count">0</sup>
+        padding: 2% 4% 2% 5%;" id="not_verified_count">0</sup>
         </a><br>
-        <p id="grid_opa3_11"><span>Completed</span></p>
+        <p id="grid_opa3_11"><span>Rejected</span></p>
       </div>
 
 
