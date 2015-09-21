@@ -40,38 +40,46 @@
   <link rel="stylesheet" href="icons/css/material-design-iconic-font.css" />
   <link rel="stylesheet" href="icons/css/material-design-iconic-font.min.css" />
    <!--icons-->
-<script type="text/javascript">
-	 document.addEventListener("deviceready", function(){
-      alert("123");
- },true);
-</script>
-   <script type="text/javascript">
-	document.addEventListener("backbutton", function() {
-            if ( $('.ui-page-active').attr('id') == 'dashboard') {
-            	alert("page active exit");
-                exitAppPopup();
-            } else {
-                history.back();             
-            }
-        }, false);
-
-function exitAppPopup() {
-    navigator.notification.confirm(
-          'Exit PhoneGap ' + device.cordova + ' Demo?'
-        , function(button) {
-              if (button == 2) {
-              	alert('asd');
-                  navigator.app.exitApp();
-              } 
-          }
-        , 'Exit'
-        , 'No,Yes'
-    );  
-    return false;
+ <script type="text/javascript">
+function onLoad()
+{
+document.addEventListener("deviceready",onDeviceReady,false);
 }
-
+function onDeviceReady()
+{
+alert("Device Ready!!");
+document.addEventListener("pause", onPause, false);
+document.addEventListener("resume", onResume, false);
+document.addEventListener("backbutton", onBackKeyDown, false);
+document.addEventListener("menubutton", onMenuKeyDown, false);
+document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
+document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
+}
+function onPause()
+{
+alert("pause Event Accured");
+}
+function onResume()
+{
+alert("Resume Event Accoured");
+}
+function onBackKeyDown()
+{
+alert("back button pressed");
+}
+function onMenuKeyDown()
+{
+alert("menubutton pressed");
+}
+function onVolumeDownKeyDown()
+{
+alert("Volume Down button pressed");
+}
+function onVolumeUpKeyDown()
+{
+alert("Volume Up button pressed");
+}
 </script>
-
 
 <style type="text/css">
   #status_val-button{
@@ -85,7 +93,7 @@ function exitAppPopup() {
   }
 </style>
 	</head>
-	<body style="padding:0; margin:0;">
+	<body style="padding:0; margin:0;" onload="onLoad()">
 
 
    <div data-role="page" id="pageone" class="bg">
@@ -562,20 +570,20 @@ function exitAppPopup() {
  
      <!--slider div-->
 
-    <div class="document_imag_inproone_newa rondell-item rondell-item-focused  " style="opacity: 1; width: 149px; height: 200px; left: 125.5px; top: 10px; z-index: 1003; display: block;">
+    <div class="document_imag_inproone_newc rondell-item rondell-item-focused  " style="opacity: 1; width: 149px; height: 200px; left: 125.5px; top: 10px; z-index: 1003; display: block;">
 
     <div class=" rondell-item-overlay" style="height: auto; overflow: auto; opacity: 1; display: block;"></div></div> 
 
 
-    <div class="document_imag_inproone_newb rondell-item rondell-item-focused  " style="opacity: 1; width: 149px; height: 200px; left: 125.5px; top: 10px; z-index: 1003; display: block;">
+    <div class="document_imag_inproone_newd rondell-item rondell-item-focused  " style="opacity: 1; width: 149px; height: 200px; left: 125.5px; top: 10px; z-index: 1003; display: block;">
    
     <div class="rondell-item-overlay" style="height: auto; overflow: auto; opacity: 1; display: block;"></div></div>    
 
-    <div class="document_imag_inproone_newc rondell-item rondell-item-focused  " style="opacity: 1; width: 149px; height: 200px; left: 125.5px; top: 10px; z-index: 1003; display: block;">
+    <div class="document_imag_inproone_newb rondell-item rondell-item-focused  " style="opacity: 1; width: 149px; height: 200px; left: 125.5px; top: 10px; z-index: 1003; display: block;">
    
     <div class="rondell-item-overlay" style="height: auto; overflow: auto; opacity: 1; display: block;"></div></div>  
 
-     <div class="document_imag_inproone_newd rondell-item rondell-item-focused  " style="opacity: 1; width: 149px; height: 200px; left: 125.5px; top: 10px; z-index: 1003; display: block;">
+     <div class="document_imag_inproone_newa rondell-item rondell-item-focused  " style="opacity: 1; width: 149px; height: 200px; left: 125.5px; top: 10px; z-index: 1003; display: block;">
    
     <div class="rondell-item-overlay" style="height: auto; overflow: auto; opacity: 1; display: block;"></div></div>  
 
