@@ -1,8 +1,9 @@
-$(document).on('pagecreate', '#pageone', function(){ 
-    //alert("hidash");
+$(document).on('pageshow', '#pageone', function(){ 
+    
     if(sessionStorage.getItem("logged_in")=="1"){
           $.mobile.changePage($('#dashboard'), { transition: "none", changeHash: true, reverse: false }); 
     }
+
 $(document).off('click', '#submit').on('click', '#submit', function() { 
     if($('#username').val().length > 0 && $('#password').val().length > 0){
         console.log($('#check-watchuser').serialize());

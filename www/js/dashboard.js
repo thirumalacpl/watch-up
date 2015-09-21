@@ -4,6 +4,11 @@ $(document).on('pageshow', '#dashboard', function(){
 
 
 regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
+
+ 
+
+
+
 //usernamearray =  JSON.parse(sessionStorage.getItem("usernamearray"));
 //alert(regionArray_array.region);
 //alert(regionArray_array.username); 
