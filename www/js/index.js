@@ -1,5 +1,5 @@
 $(document).on('pageshow', '#pageone', function(){ 
-    //alert("hidash");
+    //alert("hidash"); 
     if(sessionStorage.getItem("logged_in")=="1"){
           $.mobile.changePage($('#dashboard'), { transition: "none", changeHash: true, reverse: false }); 
     }
@@ -55,25 +55,7 @@ success: function (result) {
 
 
     }
-/*    if( pass != ''){
-      //alert(pass+'pass');
-         sessionStorage.setItem("logged_in","1");
-       
-            sessionStorage.setItem("co_regionarray",JSON.stringify(result[12]));
-            sessionStorage.setItem("co_new_veri_list",JSON.stringify(result[13]));
-             sessionStorage.setItem("co_new_veri_list_count_array",JSON.stringify(result[14]));
-             sessionStorage.setItem("co_addressid_records_array",JSON.stringify(result[15]));
-            sessionStorage.setItem("co_educational_records_array",JSON.stringify(result[16]));
-             sessionStorage.setItem("co_multiple_documents_array",JSON.stringify(result[17]));
-              sessionStorage.setItem("co_basic_profile_records_array",JSON.stringify(result[18]));
 
-        $.mobile.loading().hide();
-        $(".ui-icon-loading").hide();
-        
-        $.mobile.changePage($('#tabpage'), { transition: "none", changeHash: true, reverse: false });
-   return false;
-
-    }*/
     
 },
 error: function (request,error) {

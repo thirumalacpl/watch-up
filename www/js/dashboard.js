@@ -5,9 +5,6 @@ $(document).on('pageshow', '#dashboard', function(){
 
 regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
 
-//usernamearray =  JSON.parse(sessionStorage.getItem("usernamearray"));
-//alert(regionArray_array.region);
-//alert(regionArray_array.username); 
 new_verification_count_array =  JSON.parse(sessionStorage.getItem("new_verification_count_array"));
 superArray =  JSON.parse(sessionStorage.getItem("new_verification_count_array"));
 supervisor_new_array= JSON.parse(sessionStorage.getItem("supervisor_new_array"));
