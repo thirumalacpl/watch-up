@@ -40,41 +40,25 @@
   <link rel="stylesheet" href="icons/css/material-design-iconic-font.css" />
   <link rel="stylesheet" href="icons/css/material-design-iconic-font.min.css" />
    <!--icons-->
-   <script src="js/phonegap-1.4.1.js" type="text/javascript"></script>
+  
 <script src="js/cordova-1.8.0.js" type="text/javascript"></script>
-
 <script type="text/javascript">
-	 document.addEventListener("deviceready", function(){
-      alert("123");
- },true);
-</script>
-   <script type="text/javascript">
-	document.addEventListener("backbutton", function() {
-            if ( $('.ui-page-active').attr('id') == 'dashboard') {
-            	alert("page active exit");
-                exitAppPopup();
-            } else {
-                history.back();             
-            }
-        }, false);
+        document.addEventListener("backbutton", onBackKeyDown, false);
 
-function exitAppPopup() {
-    navigator.notification.confirm(
-          'Exit PhoneGap ' + device.cordova + ' Demo?'
-        , function(button) {
-              if (button == 2) {
-              	alert('asd');
-                  navigator.app.exitApp();
-              } 
-          }
-        , 'Exit'
-        , 'No,Yes'
-    );  
-    return false;
+function onBackKeyDown() {
+    if($.mobile.activePage.is('#pageone')){
+                 navigator.app.exitApp(); // Exit app if current page is a login page
+    }
+    else {
+        navigator.app.backHistory(); // Go back in history in any other case
+    }
 }
-
 </script>
-
+<script type="text/javascript">
+	document.addEventListener("backbutton", function(e){
+    e.preventDefault();
+}, false);
+</script>
 
 <style type="text/css">
   #status_val-button{
@@ -3199,7 +3183,11 @@ style=" padding:17px !important;">
   <script src="nd2settings.js"></script>
 	<script src="js/nativedroid2.js"></script>
 
-  
+  <script type="text/javascript">
+	document.addEventListener("backbutton", function(e){
+    e.preventDefault();
+}, false);
+</script>
 
 	</body>
 </html>
