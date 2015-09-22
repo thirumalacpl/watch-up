@@ -1,5 +1,5 @@
-$(document).on('pagecreate', '#pageone', function(){ 
-    //alert("hidash");
+$(document).on('pageshow', '#pageone', function(){ 
+    //alert("hidash"); 
     if(sessionStorage.getItem("logged_in")=="1"){
           $.mobile.changePage($('#dashboard'), { transition: "none", changeHash: true, reverse: false }); 
     }
