@@ -40,7 +40,17 @@
   <link rel="stylesheet" href="icons/css/material-design-iconic-font.css" />
   <link rel="stylesheet" href="icons/css/material-design-iconic-font.min.css" />
    <!--icons-->
-
+  <script type="text/javascript" src="cordova-1.8.0.js"></script>
+  <script type="text/javascript">
+    // Wait for device API libraries to load
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    // device APIs are available
+    function onDeviceReady() {
+        alert("device ready event occured");
+    }
+    </script>
 
 <style type="text/css">
   #status_val-button{
@@ -54,7 +64,7 @@
   }
 </style>
 	</head>
-	<body style="padding:0; margin:0;">
+	<body style="padding:0; margin:0;" onload="onLoad()">
 
 
    <div data-role="page" id="pageone" class="bg">
