@@ -1,12 +1,12 @@
 $(document).on('pageshow', '#pageone', function(){ 
-    //alert("hidash"); 
+    //alert("hidash");
     if(sessionStorage.getItem("logged_in")=="1"){
           $.mobile.changePage($('#dashboard'), { transition: "none", changeHash: true, reverse: false }); 
     }
 $(document).off('click', '#submit').on('click', '#submit', function() { 
     if($('#username').val().length > 0 && $('#password').val().length > 0){
         console.log($('#check-watchuser').serialize());
-        $.ajax({url: 'http://staging.eimpressive.com/slimrestapi-watch/index.php',
+        $.ajax({url: 'http://staging.eimpressive.com/slim-wat/index.php',
             data:$('#check-watchuser').serialize(),
             type: 'post',                   
             async: 'true',
@@ -21,7 +21,7 @@ success: function (result) {
     console.log(result);
     var pas=result[0];
      var pass=result[14];
-   // alert(pas+'pas');
+   // alert(pas+'pas'); 
       // alert(pass+'pass');
           if(pas == '' &&  pass == ''){
     alert('username or password entered is invalid');

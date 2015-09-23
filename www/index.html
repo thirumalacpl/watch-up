@@ -44,7 +44,6 @@
       function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
     }
-
     // PhoneGap is loaded and it is now safe to call PhoneGap methods
     //
     function onDeviceReady() {
@@ -53,9 +52,10 @@
     }
 
     // Handle the back button
-    //
+    
     function onBackKeyDown() {
-    	alert("back works");	
+    	 navigator.notification.alert(
+     'No Internet Connected','Message','Done');
     }
 
     </script>

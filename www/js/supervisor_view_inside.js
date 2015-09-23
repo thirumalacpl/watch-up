@@ -324,7 +324,7 @@ oneb=oneaddress[2];
 onec=oneaddress[3];
 oned=oneaddress[4];
 onee=oneaddress[5];
-//alert(one); http://bit.ly/1LHXUJO
+//alert(one);
 //alert(onea);
 //alert(oneb);
 //alert(onec);
@@ -336,7 +336,7 @@ onee=oneaddress[5];
 if ( j == 0){
   var one=oneaddress[j];
 //alert(one+'oneiiiiiiiiiiiiiiiiiiiiiiiiiii');
-$('.document_imag_inproone_newc ').append('<img src="http://115.118.113.83/watchguardlive/documents/addressid/'+one+'" alt="Band"  class="rondell-item-image rondell-item-resizeable">');
+$('.document_imag_inproone_newc').append('<img src="http://115.118.113.83/watchguardlive/documents/addressid/'+one+'" alt="Band"  class="rondell-item-image rondell-item-resizeable">');
 }
 
 

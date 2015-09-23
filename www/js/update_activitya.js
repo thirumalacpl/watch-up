@@ -132,7 +132,7 @@ $('#chatq').append(chatq);
 
 $(document).off('click', '#before_new_listupa').on('click', '#before_new_listupa', function() {
 //alert(region_num+'refresh');
-$.ajax({url: 'http://staging.eimpressive.com/slimrestapi-watch/count.php?region_num='+region_num,
+$.ajax({url: 'http://staging.eimpressive.com/slim-wat/count.php?region_num='+region_num,
   data:$('#new').serialize(),
   type: 'post',                   
   async: 'true',

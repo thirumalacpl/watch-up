@@ -4,7 +4,9 @@ $(document).on('pageshow', '#dashboard', function(){
 
 
 regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
-
+//usernamearray =  JSON.parse(sessionStorage.getItem("usernamearray"));
+//alert(regionArray_array.region);
+//alert(regionArray_array.username); 
 new_verification_count_array =  JSON.parse(sessionStorage.getItem("new_verification_count_array"));
 superArray =  JSON.parse(sessionStorage.getItem("new_verification_count_array"));
 supervisor_new_array= JSON.parse(sessionStorage.getItem("supervisor_new_array"));
@@ -23,6 +25,8 @@ not_veri_count_array =  JSON.parse(sessionStorage.getItem("not_veri_count_array"
 
 
 region=regionArray_array.region;
+
+
 
 regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
 username=regionArray_array.username;
@@ -68,7 +72,7 @@ $("#completed_count").html(not_verified_counta.completed_count);
 
 $(document).off('click', '#new_verification').on('click', '#new_verification', function() {
 //alert(region+'refresh');
-$.ajax({url: 'http://staging.eimpressive.com/slimrestapi-watch/dashnewveri.php?region='+region,
+$.ajax({url: 'http://staging.eimpressive.com/slim-wat/dashnewveri.php?region='+region,
   data:$('#new').serialize(),
   type: 'post',                   
   async: 'true',
@@ -107,7 +111,7 @@ alert('Network error has occurred please try again!');
 
 $(document).off('click', '#inprogress').on('click', '#inprogress', function() {
 //alert(region+'inprogress');
-$.ajax({url: 'http://staging.eimpressive.com/slimrestapi-watch/dashinprogress.php?region='+region,
+$.ajax({url: 'http://staging.eimpressive.com/slim-wat/dashinprogress.php?region='+region,
   data:$('#new').serialize(),
   type: 'post',                   
   async: 'true',
@@ -148,7 +152,7 @@ alert('Network error has occurred please try again!');
 
 $(document).off('click', '#verified').on('click', '#verified', function() {
 //alert(region+'verified');
-$.ajax({url: 'http://staging.eimpressive.com/slimrestapi-watch/dashverified.php?region='+region,
+$.ajax({url: 'http://staging.eimpressive.com/slim-wat/dashverified.php?region='+region,
   data:$('#new').serialize(),
   type: 'post',                   
   async: 'true',
@@ -189,7 +193,7 @@ alert('Network error has occurred please try again!');
 
 $(document).off('click', '#not_verified').on('click', '#not_verified', function() {
 //alert(region+'verified');
-$.ajax({url: 'http://staging.eimpressive.com/slimrestapi-watch/dash_not_verified.php?region='+region,
+$.ajax({url: 'http://staging.eimpressive.com/slim-wat/dash_not_verified.php?region='+region,
   data:$('#new').serialize(),
   type: 'post',                   
   async: 'true',
@@ -229,7 +233,7 @@ alert('Network error has occurred please try again!');
 
 $(document).off('click', '#completed').on('click', '#completed', function() {
 //alert(region+'verified');
-$.ajax({url: 'http://staging.eimpressive.com/slimrestapi-watch/completed.php?region='+region,
+$.ajax({url: 'http://staging.eimpressive.com/slim-wat/completed.php?region='+region,
   data:$('#newt').serialize(),
   type: 'post',                   
   async: 'true',

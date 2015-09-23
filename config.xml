@@ -1,6 +1,6 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.advs.manhummel.lpa" version="1.1.0">
-  <name>WATCHGUARD_v</name>
-  <description>WATCHGUARD_v</description>
+  <name>WATCHGUARD_exit</name>
+  <description>WATCHGUARD_exit</description>
   <author href="http://advicesync.com" email="support@advicesync.com">eImpressive</author>
   <content src="index.html"/>
   <preference name="orientation" value="default"/>
@@ -36,6 +36,7 @@
 
   <plugin name="DatePickerPlugin" value="com.bikasv.plugins.datepicker.DatePickerPlugin"/>
 
+  
 
 <!-- iOS Specific Fixes -->
   <gap:plugin name="com.phonegap.plugin.statusbar" />
@@ -54,6 +55,10 @@
  <feature name="StatusBar">
             <param name="ios-package" value="CDVStatusBar" onload="true" />
  </feature>
+
+ <feature name="Camera">
+      <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+  </feature>
 
   <preference name="webviewbounce" value="false" />
   <preference name="DisallowOverscroll" value="true" />
