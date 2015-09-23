@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back Button Example</title>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile.min.css" />
+    <script src="cordova-1.5.0.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //http://bit.ly/1KJMTeG
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("backbutton", onBackKeyDown, false);
+    }
+
+    // Handle the back button
+    
+    function onBackKeyDown() {
+        alert("back");
+    }
+
+    </script>
+  </head>
+  <body onload="onLoad()">
+  <p>on load</p>
+  </body>
+</html>
